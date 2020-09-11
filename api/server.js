@@ -18,9 +18,13 @@ server.use("/",ItemRoute);
 const DB_CONNECTION = "mongodb://root:rootpassword@0.0.0.0:27017"
 
 Mongoose.connect(DB_CONNECTION, {useNewUrlParser: true, useUnifiedTopology: true },(error) => {
-    console.log(error)
-    console.log("conected to db")
-})
+    if(error){
+        console.log(error);
+        console.log("Failed to connect to MongaDb");
+    } else {
+        console.log("conected to db");
+    }
+});
 
 server.get("/",(req,res) => {
     res.send("server is running ")

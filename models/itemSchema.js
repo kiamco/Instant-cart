@@ -5,7 +5,7 @@ const ItemSchema = Mongoose.Schema({
         type: String,
         required: true
     },
-    data :{
+    data: {
         type: Date,
         default: Date.now
     },

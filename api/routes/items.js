@@ -19,6 +19,13 @@ router.post("/items", async (req,res) => {
     
 });
 
-router.get("/item")
+router.get("/items", async (req,res) => {
+    try{    
+        const items =  await Items.find();
+        res.status(200).json({data:items, message:"success"});
+    } catch(e) {
+        res.status(500).json({error: e})
+    }
+});
 
 export default router;
