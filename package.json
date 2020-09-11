@@ -1,0 +1,37 @@
+{
+  "name": "instant-cart-backend",
+  "version": "1.0.0",
+  "description": "a cart micro service for Ecommerece website",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^4.1.1",
+    "mongoose": "^5.10.4",
+    "nodemon": "^2.0.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/node": "^7.10.5",
+    "@babel/plugin-transform-arrow-functions": "^7.10.4",
+    "@babel/preset-env": "^7.11.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node app.js",
+    "build": "babel ./ -d lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiamco/Instant-cart.git"
+  },
+  "author": "kim kiamco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kiamco/Instant-cart/issues"
+  },
+  "homepage": "https://github.com/kiamco/Instant-cart#readme"
+}
